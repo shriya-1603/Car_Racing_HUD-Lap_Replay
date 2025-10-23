@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Racing HUD + Lap Replay — Home</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    :root{ --page-pad: clamp(16px, 3vh, 40px); }
+    html, body { height: 100%; }
+    /* Use dynamic viewport height so header/text never gets cut on some browsers */
+    body{
+      box-sizing: border-box;
+      min-height: 100dvh;          /* dynamic vh fixes mobile/zoom issues */
+      padding: var(--page-pad) 20px 48px 40px;  /* top/side/bottom space */
+      background:#0b0b0c; color:#f1f1f4; font-family:'Segoe UI',system-ui,sans-serif;
+    }
+    .wrap{ max-width: 980px; margin: 0 auto; }
+    header{ text-align:center; margin-bottom: 18px; }
+    header h1{ font-size: 2.4rem; margin: 0 0 6px; }
+    header p.subtitle{ color:#00e6b8; font-weight:600; margin:0; }
+    section.cardlike{
+      background:#131316; border-radius:18px; padding:28px 34px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35); line-height:1.7;
+    }
+    h2{ color:#00e6b8; margin:0 0 6px; }
+    h3{ margin:16px 0 6px; }
+    ul{ margin:0 0 12px 20px; }
+    li{ margin-bottom:6px; }
+    code{ background:#1d1e22; padding:.1em .35em; border-radius:6px; }
+    .shots{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px; }
+    .shots img{ width:100%; height:auto; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.4); }
+    .cta{ text-align:center; margin-top: 20px; }
+    .btn{
+      display:inline-block; padding:12px 28px; border-radius:14px;
+      background:linear-gradient(90deg,#2bd4bd,#00e6b8); color:#001b14; font-weight:800;
+      text-decoration:none; box-shadow:0 10px 28px rgba(0,230,184,.25);
+    }
+    @media (max-width: 760px){
+      body{ padding: var(--page-pad) 14px 28px; }
+      .shots{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🏁 Racing HUD + Lap Replay</h1>
+      <p class="subtitle">A Pure HTML + CSS Front‑End Racing Interface</p>
+    </header>
+
+    <section class="cardlike">
+      <h2>Project Overview</h2>
+      <p><strong>Team Members:</strong> Sreenija Kanugonda(Team Leader), Shriya Kotala<br/>
+         <strong>Project Title:</strong> Racing HUD + Lap Replay</p>
+      <p>
+        This project is a <b>front‑end demo (UI only)</b> built entirely using HTML and CSS, with no JavaScript.
+        It showcases an animated car racing interface with a live speedometer, motion‑path car animation, pit‑stop sequence,
+        weather overlay, and split‑times leaderboard — all achieved purely with <code>@keyframes</code>,
+        <code>transform()</code>, and creative CSS transitions.
+      </p>
+
+      <h3>Core Features</h3>
+      <ul>
+        <li><b>Car Path Animation:</b> The car moves smoothly around a custom SVG track using motion path animation.</li>
+        <li><b>Speedometer Needle:</b> Rotates dynamically to represent speed levels with easing transitions.</li>
+        <li><b>Flag States:</b> Simulates green, yellow, and red race flags — controlling start, slow, and stop states with color‑based backgrounds.</li>
+      </ul>
+
+      <h3>Stretch Goals</h3>
+      <ul>
+        <li><b>Weather Overlay:</b> CSS rain effect created with pseudo‑elements and <code>@keyframes</code>.</li>
+        <li><b>Pit Stop Sequence:</b> Animated stop with timed pit panels sliding in/out.</li>
+        <li><b>Split Times Panel:</b> Slide‑in leaderboard using <code>transition: transform</code>.</li>
+      </ul>
+
+      <h3>Team Members & Responsibilities</h3>
+      <ul>
+        <li><b>Shriya Kotala</b> — Track + car animation, speedometer + flags, rain overlay.</li>
+        <li><b>Sreenija Kanugonda</b> — Lap replay, pit‑stop panels, split‑times leaderboard styling.</li>
+      </ul>
+
+      <!-- <div class="shots">
+        <img src="screenshots/preview1.png" alt="Racing HUD preview">
+        <img src="screenshots/preview2.png" alt="Speedometer and split times preview">
+      </div> -->
+
+      <div class="cta">
+        <a href="index.html" class="btn">Enter the Racing App →</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
